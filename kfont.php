@@ -47,7 +47,7 @@ class KWidget extends WP_Widget {
 
 	function widget( $args, $instance ) {
 		// Widget output 
-		kwidget_user_interface();
+		kwidget_user_interface( $args );
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -106,9 +106,12 @@ function kstyle_register_widgets() {
 
 add_action( 'widgets_init', 'kstyle_register_widgets' );
 /*****  output widget Form function *****/
-function kwidget_user_interface()
+function kwidget_user_interface( $args )
 {
+    echo $args['before_widget'];
+    echo $args['before_title'] . "Texto" . $args['after_title'];
 	include('kuser.php');
+    echo $args['after_widget'];
 } 
 /*****  output widget Form function *****/
 ?>

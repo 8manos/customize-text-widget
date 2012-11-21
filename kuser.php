@@ -25,7 +25,7 @@ $kfont3= get_option( 'kfont3');
 <?php 
 wp_enqueue_script( 'jquery' );
 
-//wp_enqueue_script( 'jquery-ui-core' );
+wp_enqueue_script( 'jquery-ui-core' );
 wp_enqueue_script( 'jquery-ui-slider'); 
 wp_register_script( 'kscript', plugins_url( 'kscript.js' , __FILE__ ), array( 'jquery-ui-slider' ) );
 wp_enqueue_script( 'kscript' );
@@ -35,8 +35,7 @@ wp_enqueue_style ( 'jquery-ui-standard-css', $jquery_css_base );
 wp_enqueue_style ( 'jquery-ui-css', plugin_dir_url( __FILE__ ).'kstyle.css' );
 ?>
 
-<div id="ktext" class="widget-wrapper widget_text">
-	<div class="ktitle"><?php if($ktitle)echo $ktitle; ?></div>
+<div id="ktext" class="widget-wrapper widget_text clearfix">
 
 <div id="kcselector" data-selector="<?php if($kcselector) echo $kcselector; ?>" style="display:none;">&nbsp;</div>
 <div id="kmin" data-min="<?php if($kminrange) echo $kminrange; ?>" style="display:none;">&nbsp;</div>

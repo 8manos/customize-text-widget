@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 	
 	var  kcselector = $("#kcselector").attr('data-selector');
-			 kcselector = $('.'+ kcselector );
+		 kcselector = $( kcselector );
 	//$("#kslider").slider();
 	var kmin = eval($("#kmin").attr("data-min"));
 	var kmax = eval($("#kmax").attr("data-max"));
